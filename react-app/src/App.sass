@@ -1,0 +1,19 @@
+@use './_variables' as variables
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+:root
+    -page-padding: 0
+body
+    color: variables.$clr-white
+    font-family: variables.$ff-main
+
+@media (prefers-reduced-motion: no-preference)
+  .App-logo
+    animation: App-logo-spin infinite 20s linear
+
+@media screen and ( min-width: 1024px )
+    :root
+        -page-padding: 3rem 7rem
+    
