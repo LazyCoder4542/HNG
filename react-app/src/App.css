@@ -1,1 +1,1 @@
-*{padding:0;margin:0;box-sizing:border-box}:root{--page-padding: 0}body{background-color:#fff;font-family:"Inter"}@media screen and (min-width: 1024px){:root{--page-padding: 3rem 7rem}}
+*{padding:0;margin:0;box-sizing:border-box}:root{--page-padding: 0}body{background-color:#fff;font-family:"Inter";font-weight:400;color:#101828}a{all:unset;color:inherit;cursor:pointer}@media screen and (min-width: 1024px){:root{--page-padding: 3rem 7rem}}
