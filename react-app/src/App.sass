@@ -6,11 +6,19 @@
 :root
     --page-padding: 0
 body
+    padding: var(--page-padding)
     background-color: variables.$clr-white
     font-family: variables.$ff-main
     font-weight: 400
     color: variables.$clr-gray-900
     min-height: 100vh
+#root
+    display: flex
+    flex-direction: column
+    min-height: 100vh
+    justify-content: space-between
+    &>.container
+        margin: auto 0
 .btn
     @include variables.button
     &.btn-primary
