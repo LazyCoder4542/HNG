@@ -10,11 +10,20 @@ body
     font-family: variables.$ff-main
     font-weight: 400
     color: variables.$clr-gray-900
+    min-height: 100vh
+.btn
+    @include variables.button
+    &.btn-primary
+        @include variables.primaryButton
+    &.btn-secondary
+        @include variables.secondaryButton
 a
     all: unset
     color: inherit
     cursor: pointer
-
+*:has(> svg)
+    display: inline-flex
+    align-items: center
 @media screen and ( min-width: 1024px )
     :root
         --page-padding: 3rem 7rem
