@@ -11,6 +11,29 @@ section
     align-items: center
 section#profile, section#links, section#links>.links
     gap: 1.5rem
+section#profile
+    position: relative
+    .action_button
+        display: inline-flex
+        cursor: pointer
+        position: absolute
+        top: 0
+        right: 0
+        transform: translateY(-50%)
+        &:focus
+            outline: none
+            border: none
+            &::after
+                position: absolute
+                content: ""
+                top: 0
+                right: 0
+                border-radius: 50%
+                width: 100%
+                height: 100%
+                transform: scale(1.2)
+                z-index: -1
+                background-color: variables.$clr-gray-200
 section#links
     font-size: 14px
     .links
@@ -19,8 +42,27 @@ section#links
             padding: 1.5rem 2rem
             background-color: variables.$clr-gray-200
             border-radius: .5rem
+            -webkit-tap-highlight-color: variables.$clr-gray-300
+            &:focus
+                border: 1px solid variables.$clr-gray-400
     .socials
         display: flex
         padding: 1.5rem 0
         gap: 1.5rem
         justify-content: center
+
+@media screen and ( min-width: 1024px )
+    section#links
+        font-size: 14px
+        .links
+            width: 100%
+            a
+                &:hover
+                    background-color: variables.$clr-gray-300
+    section#profile
+        .action_button
+            &:hover
+                rect:nth-child(1)
+                    fill: variables.$clr-gray-300
+                path
+                    stroke: variables.$clr-gray-500
