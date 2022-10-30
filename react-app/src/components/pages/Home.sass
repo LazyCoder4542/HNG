@@ -6,12 +6,12 @@ main
     font-weight: 500
     padding: 4rem 1rem 0
     gap: 2rem
-    text-align: center
 section
     align-items: center
 section#profile, section#links, section#links>.links
     gap: 1.5rem
 section#profile
+    text-align: center
     position: relative
     .action_button
         display: inline-flex
@@ -53,14 +53,17 @@ section#links
 
 @media screen and ( min-width: 1024px )
     section#links
-        font-size: 14px
+        font-size: 1.125rem
+        font-weight: 500
         .links
             width: 100%
+            text-align: center
             a
                 &:hover
                     background-color: variables.$clr-gray-300
     section#profile
         .action_button
+            right: 15%
             &:hover
                 rect:nth-child(1)
                     fill: variables.$clr-gray-300

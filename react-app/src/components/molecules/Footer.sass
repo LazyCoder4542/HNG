@@ -9,6 +9,7 @@
         flex-direction: column
         span:nth-child(2)
             color: variables.$clr-gray-500
+            font-size: 0.875rem
         span:nth-child(3)
             svg
                 height: 2rem
@@ -19,6 +20,11 @@
             justify-content: space-between
             flex-direction: row
             align-items: center
-    span:nth-child(2)
-        width: 100%
-        text-align: center
+            span:nth-child(2)
+                width: 100%
+                text-align: center
+@media screen and ( min-width: 1024px )
+    #site-footer
+        .container
+            span:nth-child(2)
+                font-size: 1rem
