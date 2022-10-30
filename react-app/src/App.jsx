@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 // importing pages
 import Home from './components/pages/Home';
 import Page404 from './components/pages/404';
@@ -11,7 +11,7 @@ function App() {
     <>
     <div className='container'>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route exact path="/" element={<Home />} />
         <Route path="*" element={<Page404 />} />
       </Routes>
     </div>

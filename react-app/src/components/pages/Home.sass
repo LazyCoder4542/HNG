@@ -13,6 +13,36 @@ section#profile, section#links, section#links>.links
 section#profile
     text-align: center
     position: relative
+    .profile-pic
+        cursor: pointer
+        width: 5.5rem
+        height: 5.5rem
+        position: relative
+        img
+            border-radius: 50%
+            pointer-events: none
+            width: 100%
+            height: 100%
+            object-fit: cover
+        &::after
+            border-radius: 50%
+            padding: .25rem
+            display: flex
+            justify-content: center
+            align-items: flex-end
+            content: url("/images/Icon (1).svg")
+            position: absolute
+            top: 0
+            left: 0
+            pointer-events: none
+            background-color: variables.$clr-pic-overlay
+            opacity: 0
+            transition: opacity 500ms
+            width: 100%
+            height: 100%
+        &:hover::after
+            opacity: 1
+
     .action_button
         display: inline-flex
         cursor: pointer
@@ -20,20 +50,6 @@ section#profile
         top: 0
         right: 0
         transform: translateY(-50%)
-        &:focus
-            outline: none
-            border: none
-            &::after
-                position: absolute
-                content: ""
-                top: 0
-                right: 0
-                border-radius: 50%
-                width: 100%
-                height: 100%
-                transform: scale(1.2)
-                z-index: -1
-                background-color: variables.$clr-gray-200
 section#links
     font-size: 14px
     .links
@@ -50,6 +66,8 @@ section#links
         padding: 1.5rem 0
         gap: 1.5rem
         justify-content: center
+        span
+            cursor: pointer
 
 @media screen and ( min-width: 1024px )
     section#links

@@ -15,12 +15,11 @@ function Page404() {
                     <p>Sorry, the page you are looking for doesn't exist or has been moved.</p>
                     <div className="buttons">
                         <button className="btn btn-primary">
-                            <Link to='/'>
+                            <Link to='/' end>
                                 Take me home
                             </Link>
                         </button>
                         <button
-                        to='/'
                         className="btn btn-secondary"
                         onClick={()=> {
                             console.log('hello');
