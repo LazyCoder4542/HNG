@@ -50,6 +50,10 @@ section#profile
         top: 0
         right: 0
         transform: translateY(-50%)
+        svg:nth-child(1)
+            display: block
+        svg:nth-child(2)
+            display: none
 section#links
     font-size: 14px
     .links
@@ -61,6 +65,11 @@ section#links
             -webkit-tap-highlight-color: #{variables.$clr-gray-300}88
             &:focus
                 border: 1px solid variables.$clr-gray-400
+    &>small
+        align-self: flex-end
+        color: tomato
+        &::before
+            content: "tap-hold to copy link url"
     .socials
         display: flex
         padding: 1.5rem 0
@@ -79,6 +88,8 @@ section#links
             a
                 &:hover
                     background-color: variables.$clr-gray-300
+        &>small::before
+            content: "right-click to copy link url"
     section#profile
         .action_button
             right: 15%
@@ -87,3 +98,7 @@ section#links
                     fill: variables.$clr-gray-300
                 path
                     stroke: variables.$clr-gray-500
+            svg:nth-child(1)
+                display: none
+            svg:nth-child(2)
+                display: block

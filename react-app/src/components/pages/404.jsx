@@ -15,7 +15,7 @@ function Page404() {
                     <p></p>
                     <div className="buttons">
                         <button className="btn btn-primary">
-                            <Link to='/' end>
+                            <Link to='/'>
                                 Take me home
                             </Link>
                         </button>

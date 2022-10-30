@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import PopUp from '../atoms/popup-msg';
 import profilepic from "./../../assets/images/profile__img.png";
-import {ReactComponent as ShareLogo} from "./../../assets/icons/share.svg"
+import {ReactComponent as MenuIcon} from "./../../assets/icons/menu.svg"
+import {ReactComponent as ShareIcon} from "./../../assets/icons/share.svg"
 import {ReactComponent as SlackLogo} from "./../../assets/icons/slack.svg"
 import {ReactComponent as GitHubLogo} from "./../../assets/icons/github.svg"
 import './Home.css'
@@ -32,7 +33,6 @@ export default function Home() {
                 })
             }, 2000)
             // return false;
-            return <PopUp />
         }
     }, [])
     return (
@@ -46,10 +46,11 @@ export default function Home() {
                     <div className="name">
                         <h3 className="fullname">Annette Black</h3>
                         <p id="twitter">@MathFreak7</p>
-                        <p id="slack" hidden></p>
+                        <p id="slack" hidden>adeolafadare8</p>
                     </div>
                     <div className="action_button focused-elem" tabIndex={1}>
-                        <ShareLogo />
+                        <MenuIcon />
+                        <ShareIcon />
                     </div>
                 </section>
                 <section id="links">
@@ -61,12 +62,15 @@ export default function Home() {
                         <a href='https://backgroundcheck.zuri.team' target='_blank' rel="noreferrer noopener" id="pitch" title='Don’t Make Assumptions, Be 100% Certain when hiring'>Background Check for Coders</a>
                         <a href='https://books.zuri.team/design-rules' target='_blank' rel="noreferrer noopener" id="book__design" title='Get a copy of a free design book'>Design Books</a>
                     </div>
+                    <small></small>
                     <div className="socials">
                         <span>
                             <SlackLogo />
                         </span>
                         <span>
-                            <GitHubLogo />
+                            <a href="https://www.github.com/LazyCoder4542" rel='noopener noreferrer' target="_blank">
+                                <GitHubLogo />
+                            </a>
                         </span>
                     </div>
                 </section>
