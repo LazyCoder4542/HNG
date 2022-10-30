@@ -1,12 +1,43 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import PopUp from '../atoms/popup-msg';
 import profilepic from "./../../assets/images/profile__img.png";
 import {ReactComponent as ShareLogo} from "./../../assets/icons/share.svg"
 import {ReactComponent as SlackLogo} from "./../../assets/icons/slack.svg"
 import {ReactComponent as GitHubLogo} from "./../../assets/icons/github.svg"
 import './Home.css'
 export default function Home() {
+    const [msgProps, setMsgProps] = useState({
+        x: 0,
+        y: 0,
+        class: 'hidden',
+        msg: ''
+    })
+    useEffect(() => {
+        [...document.querySelector('.links').children].forEach(elem => {
+                elem.oncontextmenu = rightClick;
+            });
+        function rightClick(e) {
+            e.preventDefault();
+            navigator.clipboard.writeText(e.target.href);
+            setMsgProps({
+                x: e.clientX,
+                y: e.clientY,
+                class: "shown",
+                msg: "copied to clipboard"
+            })
+            setTimeout(()=>{
+                setMsgProps({
+                    class: "hidden",
+                    msg: ""
+                })
+            }, 2000)
+            // return false;
+            return <PopUp />
+        }
+    }, [])
     return (
         <React.Fragment>
+            <PopUp x={msgProps.x} y={msgProps.y} class={msgProps.class} msg={msgProps.msg} />
             <main>
                 <section id="profile">
                     <div className="profile-pic focused-elem" tabIndex={1}>

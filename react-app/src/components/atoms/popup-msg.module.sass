@@ -1,0 +1,17 @@
+@use './../../_variables.sass' as variables
+.pop_up
+    top: 0
+    background: red
+    padding: .5rem 1rem
+    font-weight: 600
+    color: variables.$clr-gray-600
+    background-color: variables.$clr-gray-200
+    border-radius: 100px
+    border: 1px solid variables.$clr-gray-400
+    transition: opacity 500ms
+    &.hidden
+        opacity: 0
+        visibility: hidden
+    &.shown
+        visibility: visible
+        opacity: 1
