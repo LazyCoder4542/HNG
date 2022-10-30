@@ -12,7 +12,7 @@ function Page404() {
                         <small>404 error</small>
                         <h1>We can't find that page</h1>
                     </header>
-                    <p>Sorry, the page you are looking for doesn't exist or has been moved.</p>
+                    <p></p>
                     <div className="buttons">
                         <button className="btn btn-primary">
                             <Link to='/' end>

@@ -22,10 +22,33 @@ section#error
             font-size: 2.25rem
     p
         color: variables.$clr-gray-600
+        &:before
+            content: "Sorry, the page you are looking for doesn't exist or has been moved."
     .buttons
         margin-top: 2rem
         width: 100%
         display: flex
         flex-direction: column
         gap: .75rem
+@media screen and ( min-width: 1024px )
+    main
+        font-size: 1.25rem
+        padding: 4rem 1rem
+    section#error
+        gap: 1rem
+        align-items: flex-start !important
+        header
+            width: 100%
+            font-weight: 600
+            small
+                color: variables.$clr-primary2
+                font-size: inherit
+            h1
+                font-size: 6rem
+        p::before
+            content: "Sorry, the page you are looking for doesn't exist"
+        .buttons
+            width: auto
+            justify-content: flex-start
+            flex-direction: row-reverse
     
