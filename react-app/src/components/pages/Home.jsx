@@ -20,7 +20,7 @@ export default function Home() {
             e.preventDefault();
             navigator.clipboard.writeText(e.target.href);
             setMsgProps({
-                x: e.clientX<(window.innerWidth - 100) ? e.clientX : (window.innerWidth - 100),
+                x: e.clientX<(window.innerWidth - 200) ? e.clientX : (window.innerWidth - 200),
                 y: e.clientY,
                 class: "shown",
                 msg: "copied to clipboard"
