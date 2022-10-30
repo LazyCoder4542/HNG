@@ -21,7 +21,7 @@ export default function Home() {
             navigator.clipboard.writeText(e.target.href);
             setMsgProps({
                 x: e.clientX<(window.innerWidth - 200) ? e.clientX : (window.innerWidth - 200),
-                y: e.clientY,
+                y: e.clientY + window.scrollY,
                 class: "shown",
                 msg: "copied to clipboard"
             })
@@ -56,10 +56,10 @@ export default function Home() {
                     <div className="links">
                         <a href='https://www.twitter.com/MathFreak6' target='_blank' rel="noreferrer noopener" id="btn__twitter">Twitter Link</a>
                         <a href='https://training.zuri.team' target='_blank' rel="noreferrer noopener" id="btn__zuri">Zuri Team</a>
-                        <a href='https://books.zuri.team' target='_blank' rel="noreferrer noopener" id="books">Zuri Books</a>
-                        <a href='https://books/zuri/team/python-for-beginners?ref-id={slackusername}' target='_blank' rel="noreferrer noopener" id="book__python">Python Books</a>
-                        <a href='https://backgroundcheck.zuri.team' target='_blank' rel="noreferrer noopener" id="pitch">Background Check for Coders</a>
-                        <a href='https://books/zuri/team/design-rules' target='_blank' rel="noreferrer noopener" id="book__design">Design Books</a>
+                        <a href='https://books.zuri.team' target='_blank' rel="noreferrer noopener" id="books" title='Find featured books on coding and design'>Zuri Books</a>
+                        <a href='https://books.zuri.team/python-for-beginners?ref_id=adeolafadare8' target='_blank' rel="noreferrer noopener" id="book__python" title='Begin your Python career'>Python Books</a>
+                        <a href='https://backgroundcheck.zuri.team' target='_blank' rel="noreferrer noopener" id="pitch" title='Don’t Make Assumptions, Be 100% Certain when hiring'>Background Check for Coders</a>
+                        <a href='https://books.zuri.team/design-rules' target='_blank' rel="noreferrer noopener" id="book__design" title='Get a copy of a free design book'>Design Books</a>
                     </div>
                     <div className="socials">
                         <span>
