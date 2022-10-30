@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-
+import { Link, useNavigate } from 'react-router-dom';
 import {ReactComponent as ArrBackIcon} from "./../../assets/icons/arrow_back.svg";
 import "./404.css"
 function Page404() {
+    const navigate = useNavigate()
     return (
         <React.Fragment>
             <main>
@@ -14,13 +14,24 @@ function Page404() {
                     </header>
                     <p>Sorry, the page you are looking for doesn't exist or has been moved.</p>
                     <div className="buttons">
-                        <Link to='/' className="btn btn-primary">Take me home</Link>
-                        <Link to='/' className="btn btn-secondary">
+                        <button className="btn btn-primary">
+                            <Link to='/'>
+                                Take me home
+                            </Link>
+                        </button>
+                        <button
+                        to='/'
+                        className="btn btn-secondary"
+                        onClick={()=> {
+                            console.log('hello');
+                            navigate(-1)
+                        }}
+                        >
                             <span>
                                 <ArrBackIcon />
                             </span>
                             Go back
-                        </Link>
+                        </button>
                     </div>
                 </section>
             </main>
