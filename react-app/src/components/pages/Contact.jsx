@@ -158,7 +158,7 @@ function Contact() {
                                 />
                                 <label htmlFor="agree_to_terms">You agree to providing your data to {name} who may contact you.</label>
                             </div>
-                            <button type="submit" className={userAgreed ? null : 'disabled' }>Send message</button>
+                            <button type="submit" id='btn__submit' className={userAgreed ? null : 'disabled' }>Send message</button>
                         </form>
                     </div>
                 </section>
