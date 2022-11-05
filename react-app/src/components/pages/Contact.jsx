@@ -25,7 +25,7 @@ function Contact() {
                             let isFormSubmittable = self.validateFields(input)
                             this.isFormSubmittable = this.isFormSubmittable && isFormSubmittable
                         });
-                        //console.log(this.isFormSubmittable)
+                        console.log(this.isFormSubmittable)
                         }
             
                     })
@@ -36,7 +36,7 @@ function Contact() {
                         const input = document.querySelector(`#${field}`)
                         input.addEventListener('input', () => {
                             let isFormSubmittable = self.validateFields(input)
-                            //console.log(isFormSubmittable);
+                            console.log(isFormSubmittable);
                         })
                     })
                 }
