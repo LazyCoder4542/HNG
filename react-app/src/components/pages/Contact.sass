@@ -1,7 +1,10 @@
 @use './../../_variables.sass' as variables
 section#contact
+    margin-inline: auto
+    max-width: 45rem
     display: flex
     flex-direction: column
+    align-items: stretch
     gap: 3rem
     header
         display: flex
@@ -23,6 +26,7 @@ section#contact
                     colo: variables.$clr-gray-700
                     font-size: .875rem
                 input, textarea
+                    caret-color: variables.$clr-gray-900
                     padding: .625rem .875rem
                     border: 1px solid #D0D5DD
                     box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05)
@@ -36,6 +40,9 @@ section#contact
                         display: none
                     &:focus
                         outline: 1px solid variables.$clr-primary3
+                .error-text
+                    display: none
+                    color: #F83F23
                 textarea
                     resize: none
                 &.agree
@@ -43,7 +50,24 @@ section#contact
                     align-items: flex-start
                     label
                         color: variables.$clr-gray-600
+                &.error
+                    input, textarea
+                        border-color: #F83F23
+                        &:focus
+                            outline-width: .2rem   
+                            outline-color: #F83F2344
+                            //outline-offset: .125rem
+                    .error-text
+                        display: block
+
             button
                 @include variables.button
                 @include variables.primaryButton6
-                
+                transition: all 500ms
+                &:hover
+                    background-color: #175CD3
+                &:focus
+                    outline: .375rem solid #D1E9FF
+                &.disabled
+                    background-color: #B2DDFF !important
+                    pointer-events: none !important
