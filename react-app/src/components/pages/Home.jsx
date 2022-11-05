@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import PopUp from '../atoms/popup-msg';
 import profilepic from "./../../assets/images/profile__img.png";
 import {ReactComponent as MenuIcon} from "./../../assets/icons/menu.svg"
@@ -61,6 +62,7 @@ export default function Home() {
                         <a href='https://books.zuri.team/python-for-beginners?ref_id=adeolafadare8' target='_blank' rel="noreferrer noopener" id="book__python" title='Begin your Python career'>Python Books</a>
                         <a href='https://backgroundcheck.zuri.team' target='_blank' rel="noreferrer noopener" id="pitch" title='Don’t Make Assumptions, Be 100% Certain when hiring'>Background Check for Coders</a>
                         <a href='https://books.zuri.team/design-rules' target='_blank' rel="noreferrer noopener" id="book__design" title='Get a copy of a free design book'>Design Books</a>
+                        <Link to={'/contact'} id='contact'>Contact us</Link>
                     </div>
                     <small></small>
                     <div className="socials">
